@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>Página Inicial</title>
+<link rel="stylesheet" href="styles/styles.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header>
+<div class="top">
+	<div class="Tesquerdo1">
+	<button class="btn"><a href="Home Page.html">Inicio</a></button>
+	</div>
+	<div class="tesquerdo2">
+	<div class="dropdown">
+	<button class="dropbtn"><a href="servicos.html">Serviços</a></button>	
+		<div class="dropdown-content">
+			<a href="vooshoteis.html">Voos/Hoteis</a>
+			<a href="eventos.html">Eventos</a>		
+		</div>
+	</div>
+	</div>
+	
+	<div class="tcentro">
+		<button class="btn"><a href="Home Page.html">TripChoice</a></button>
+	</div>
+	
+	<div class="Tdireito">
+	<button class="bcart">
+	<a href="carrinho.html">
+	<img class="chart" src="images/carrinho.png"></a>
+	</button>
+
+	<button onclick="document.getElementById('login1').style.display='block'" style="width:30%;"
+	class="btn">Iniciar sessão</button>
+	<button onclick="document.getElementById('criar1').style.display='block'" style="width:30%;"
+	class="btn">Criar Conta</button>
+	</div>
+</div>
+</header>
+
+<body>
+
+<div id="login1" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login1').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit" class="btn">Criar Conta</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('login1').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// o formulário aparece
+var modal = document.getElementById('login1');
+
+// Clicando na parte de fora do formulário o mesmo é fechado
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<div id="criar1" class="form">
+  
+  <form class="form-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login1').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+	  
+	  <label for="psw"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit" class="btn">Criar Conta</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('criar1').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// o formulário aparece
+var form = document.getElementById('criar1');
+
+// Clicando na parte de fora do formulário o mesmo é fechado
+window.onclick = function(event) {
+    if (event.target == form) {
+        form.style.display = "none";
+    }
+}
+</script>
+
+
+<div class="corpoh" style="background-image: url('images/home.png');">
+
+<p class="textop">Sejam bem vindos ao nosso site, onde pode reservar Voos, Hóteis e bilhetes 
+para eventos variados.</p>
+
+<p class="texton" style="text-align:center">Ofertas:</p>
+
+<table  cellspacing="9" cellpadding="5" border="5" align="center"  style="width:100%">
+<tr>
+    <td class ="vhimg"><img src="images/hoteluanda.png" ></td>
+	<td class="vhlt"><p><b><h1 style="font-size:30px;">Hotel Lobito</b><br></h1></p>
+	<br>
+	<p>Classificação: 4★
+	<br>Pensão Completa
+	<br>Preço: 80€/dia</p>
+	<button class="botaocomprar">comprar</button>
+	</td>
+</tr>  
+</table>
+
+<table  cellspacing="9" cellpadding="5" border="5" align="center"  style="width:100%">
+	<tr>
+	<td class="vhlt"><p><b><h1 style="font-size:30px;">Porto-Luanda</b><br></h1></p>
+	<br>
+		<p>Voo direto
+		<br>Duração: 12 hora
+		<br>Preço: 800€
+		<br>Com bagagem de mão</p>
+		<button class="botaocomprar">comprar</button>
+		</td>
+    <td class ="vhimg"><img src="images/luanda.png" ></td>
+	</tr>  
+</table>
+
+<table  cellspacing="9" cellpadding="5" border="5" align="center"  style="width:100%">
+	<tr>
+    <td class ="vhimg"><img src="images/hotelrio.png" ></td>
+	<td class="vhlt"><p><b><h1 style="font-size:30px;">Hotel Copacabana</b><br></h1></p>
+	<br>
+		<p>Classificação: 5★<br>Pensão Completa<br>Preço: 100€/dia</p>
+		<button class="botaocomprar">comprar</button>
+		</td>
+	</tr>
+</table>
+
+<table style="width:100%">
+<tr>
+	<td><p class="textop">As melhores experiências no TripChoice</p></td>
+</tr>
+</table>
+
+</div>
+</body>
+
+<footer>
+<div class="down">
+	<table style="width: 100%">
+	<tr>
+		<td class="besquerdo">
+		<button class="btn"><a href="about.html">Informações</a></button>
+		</td>
+
+		<td class="bdireito1">
+		<p class="textf">Contactos<br><br>Joel Costa Cunha<br>Yuji Yoshihara<br>Afonso Cruz<br><br>
+		R. Dr. António Bernardino de Almeida 431, 4249-015 Porto</p>
+		</td>
+	
+		<td class="bdireito2">
+		<p class="textf"><br>1200330@isep.ipp.pt<br>1220004@isep.ipp.pt<br>1221686@isep.ipp.pt</p>
+		</td>
+	<tr>
+	
+</div>
+</footer>
+</html>
