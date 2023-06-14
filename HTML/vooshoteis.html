@@ -1,0 +1,233 @@
+<html>
+<head>
+<title>Voos e Hotéis</title>
+<link rel="stylesheet" href="../styles/styles.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header>
+<div class="top">
+	<div class="tesquerdo1">
+	<button class="btn"><a href="index.php">Inicio</a></button>
+	</div>
+	<div class="tesquerdo2">
+	<div class="dropdown">
+	<button class="dropbtn"><a href="services.php">Serviços</a></button>	
+		<div class="dropdown-content">
+			<a href="vooshoteis.php">Voos/Hoteis</a>
+			<a href="eventos.php">Eventos</a>		
+		</div>
+	</div>
+	</div>
+	
+	<div class="tcentro">
+		<button class="btn"><a href="index.php">TripChoice</a></button>
+	</div>
+	
+	<div class="tdireito">
+	<li class ="cart">
+	<button class="bcart">
+	<a href="carrinho.php">
+	<ion-icon name="cart-outline"></ion-icon><span id="cartQuantity">0</span>
+	</a>
+	</button>
+	</li>
+
+	<button onclick="document.getElementById('login1').style.display='block'" class="btn">Iniciar sessão</button>
+	<button onclick="document.getElementById('criar1').style.display='block'" class="btn">Criar Conta</button>	
+	<button onclick="document.getElementById('sair').style.display='block'" class="btn">Sair</button>
+
+	</div>
+</div>
+</header>
+
+<body>
+
+<div id="login1" class="modal">
+  
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login1').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../images/img_avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" id="login" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="senha" required>
+        
+      <button type="submit" name="submit" class="btn" id="entrar">Iniciar Sessão</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('login1').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// o formulário aparece
+var modal = document.getElementById('login1');
+
+// Clicando na parte de fora do formulário o mesmo é fechado
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<div id="criar1" class="form">
+  
+  <form class="form-content animate" action="criar_conta.php" method="POST">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login1').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../images/img_avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="c_username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="c_psw" required>
+	  
+	  <label for="psw"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Enter Password" name="c_psw" required>
+        
+      <button type="submit" class="btn">Criar Conta</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('criar1').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// o formulário aparece
+var form = document.getElementById('criar1');
+
+// Clicando na parte de fora do formulário o mesmo é fechado
+window.onclick = function(event) {
+    if (event.target == form) {
+        form.style.display = "none";
+    }
+}
+</script>
+
+<div id="sair" class="modal">
+  
+  <form class="modal-content animate" action="logout.php" method="post">
+      <div class="container">
+		<h2>Têm a certeza que deseja terminar a sessão!</h2>
+      <button type="submit" name="submit" class="btn" id="sair">Fechar Sessão</button>
+    </div>
+  </form>
+</div>
+
+<script>
+// o formulário aparece
+var modal = document.getElementById('sair');
+
+// Clicando na parte de fora do formulário o mesmo é fechado
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<div class="corpo">
+<h1 style="text-align: center;">Voos e Hotéis</h1>
+</div>
+ <div>
+	<table  cellspacing="9" cellpadding="5" border="5" align="center"  style="width:100%">
+	<tr>
+		<td class="vhlt"><p> <b><h1 style="font-size: 30px;">Porto-Rio de Janeiro</b></h1></p>
+		<br>
+		<p>Voo com escala (Frankfurt)
+		<br>Duração: 14 horas
+		<br>preço: 750€
+		<br>Com bagagem de mão</p>
+		<button class="botaocomprar">comprar</button>
+		</td>
+    <td class ="vhimg"><img src="../images/brasil.png" ></td>
+		
+		</tr>
+  
+	</table>
+      </div>
+
+
+<div>
+	<table  cellspacing="9" cellpadding="5" border="5" align="center"  style="width:100%">
+	<tr>
+    <td class ="vhimg"><img src="../images/hotelrio.png" ></td>
+	<td class="vhlt"><p><b><h1 style="font-size:30px;">Hotel Copacabana</b><br></h1></p>
+	<br>
+		<p>Classificação: 5★<br>Pensão Completa<br>Preço: 100€/dia</p>
+		<button class="botaocomprar">comprar</button>
+		</td>
+		</tr>
+  
+	</table>
+</div>
+
+
+<div>
+	<table  cellspacing="9" cellpadding="5" border="5" align="center"  style="width:100%">
+	<tr>
+	<td class="vhlt"><p><b><h1 style="font-size:30px;">Porto-Luanda</b><br></h1></p>
+	<br>
+		<p>Voo direto
+		<br>Duração: 12 hora
+		<br>Preço: 800€
+		<br>Com bagagem de mão</p>
+		<button class="botaocomprar">comprar</button>
+		</td>
+    <td class ="vhimg"><img src="../images/luanda.png" ></td>
+	
+		</tr>
+  
+	</table>
+</div>
+	  
+	  
+	  <div>
+	<table  cellspacing="9" cellpadding="5" border="5" align="center"  style="width:100%">
+	<tr>
+    <td class ="vhimg"><img src="../images/hoteluanda.png" ></td>
+	<td class="vhlt"><p><b><h1 style="font-size:30px;">Hotel Lobito</b><br></h1></p>
+	<br>
+		<p>Classificação: 4★
+		<br>Pensão Completa
+		<br>Preço: 80€/dia</p>
+		<button class="botaocomprar">comprar</button>
+		</td>
+	</tr>
+  
+	</table>
+      </div>
+	
+		 <script src="../scripts/main.js"> </script>
+	  
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+
+</body>
+
+<?php
+include('../H_footer.html');
+?>
+</html>

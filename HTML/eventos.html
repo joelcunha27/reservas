@@ -1,0 +1,238 @@
+<html>
+<head>
+<title>Eventos</title>
+<link rel="stylesheet" href="../styles/styles.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header>
+<div class="top">
+	<div class="tesquerdo1">
+	<button class="btn"><a href="index.php">Inicio</a></button>
+	</div>
+	<div class="tesquerdo2">
+	<div class="dropdown">
+	<button class="dropbtn"><a href="services.php">Serviços</a></button>	
+		<div class="dropdown-content">
+			<a href="vooshoteis.php">Voos/Hoteis</a>
+			<a href="eventos.php">Eventos</a>		
+		</div>
+	</div>
+	</div>
+	
+	<div class="tcentro">
+		<button class="btn" style="text-align:center"><a href="index.php">TripChoice</a></button>
+	</div>
+	
+	<div class="tdireito">
+	<li class ="cart">
+	<button class="bcart">
+	<a href="carrinho.php">
+	<ion-icon name="cart-outline"></ion-icon><span id="cartQuantity">0</span>
+	</a>
+	</button>
+	</li>
+
+	<button onclick="document.getElementById('login1').style.display='block'" class="btn">Iniciar sessão</button>
+	<button onclick="document.getElementById('criar1').style.display='block'" class="btn">Criar Conta</button>	
+	<button onclick="document.getElementById('sair').style.display='block'" class="btn">Sair</button>
+
+	</div>
+</div>
+</header>
+
+<body>
+
+<div id="login1" class="modal">
+  
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login1').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../images/img_avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" id="login" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="senha" required>
+        
+      <button type="submit" name="submit" class="btn" id="entrar">Iniciar Sessão</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('login1').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// o formulário aparece
+var modal = document.getElementById('login1');
+
+// Clicando na parte de fora do formulário o mesmo é fechado
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<div id="criar1" class="form">
+  
+  <form class="form-content animate" action="criar_conta.php" method="POST">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login1').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../images/img_avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="c_username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="c_psw" required>
+	  
+	  <label for="psw"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Enter Password" name="c_psw" required>
+        
+      <button type="submit" class="btn">Criar Conta</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('criar1').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// o formulário aparece
+var form = document.getElementById('criar1');
+
+// Clicando na parte de fora do formulário o mesmo é fechado
+window.onclick = function(event) {
+    if (event.target == form) {
+        form.style.display = "none";
+    }
+}
+</script>
+
+<div id="sair" class="modal">
+  
+  <form class="modal-content animate" action="logout.php" method="post">
+      <div class="container">
+		<h2>Têm a certeza que deseja terminar a sessão!</h2>
+      <button type="submit" name="submit" class="btn" id="sair">Fechar Sessão</button>
+    </div>
+  </form>
+</div>
+
+<script>
+// o formulário aparece
+var modal = document.getElementById('sair');
+
+// Clicando na parte de fora do formulário o mesmo é fechado
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<div class="corpo">
+<h1 style="text-align:center;">Eventos</h1>
+	
+	<table style="width=100%">
+		<tr>
+			<th><h1>Eventos de Musica</h1></th>
+		</tr>
+		<tr>
+			<th class="evenimg"><img src="../images/batata.png"></th>
+		</tr>
+		<tr>
+		<td><button><p>Mais informaçao<p></button></td>
+		<td><button><p>Comprar<p></button></td>
+		</tr>
+			<td class="eventotext"><p>  Evento: Flauta Mágica </p>
+			<p> Musica classica</p>
+			<p> Data: 2, 3 e 5 de Setembro</p>
+			<p> Localização: Jardim do MNAA</p>
+			<p> Reservas de Tickets: 35$</p></td>
+			
+			<th class= "eventoimg"><img src="../images/eventomgk.png"></th>
+			<td class= "eventotext"><p> Evento: MGK Ticket to my Downfall</p>
+			<p> Concerto de Rock</p>
+			<p> Data: 7 de Junho</p>
+			<p> Localização: Jacksonville USA</p>
+			<p> Tickets: 80$</p></td>
+			<th class= "eventoimg"><img src="../images/evento3.png"></th>
+			<th class = "eventotext"><p> Evento: Banda The Offspring</p>
+			<p> Concerto de Rock</p>
+			<p> Localização: Berlin</p> 
+			<p> Data: 16 de Maio de 2023</p>
+			<p> Reservas de Tickets: 60$</p>
+			<th class= "eventoimg"><img src="../images/eventomusica182.png"></th>
+			<th class= "eventotext"><p> Evento: Banda Blink182 concerto</p>
+			<p> Concerto Musical</p>
+			<p> Data: 16 de abril</p>
+			<p> Localização: Charlote, NC</p>
+		</tr>
+	</table>
+	
+	<table style="width=100%">
+		<tr>
+			<th><h1>Desporto e Aventura</h1></th>
+			<th class="eventoimg"><img src="../images/Desporto1"></th>
+			<th class = "eventotext"><p> Evento: Corrida colorida</p>
+			
+			<th class= "eventoimg"><img src="../images/desporto2.png"></th>
+			<th class = "eventotext"><p> Evento: Futebol final</p>
+			<th><h3>imagem 3</h3></th>
+			<th><h3>imagem 4</h3></th>			
+		</tr>
+	</table>
+	
+	<table style="width=100%">
+		<tr>
+			<th><h1>Stand Up-Comedy</h1></th>
+		</tr>
+		<tr>
+			<th><h3>imagem 1</h3></th>
+			<th><h3>imagem 2</h3></th>
+			<th><h3>imagem 3</h3></th>
+			<th><h3>imagem 4</h3></th>			
+		</tr>
+	</table>
+	
+	<table style="width=100%">
+		<tr>
+			<th><h1>Teatro e arte</h1></th>
+		</tr>
+		<tr>
+			<th><h3>imagem 1</h3></th>
+			<th><h3>imagem 2</h3></th>
+			<th><h3>imagem 3</h3></th>
+			<th><h3>imagem 4</h3></th>			
+		</tr>
+	</table>
+</div>
+
+<script src="../scripts/main.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+
+</body>
+
+<?php
+include('../H_footer.html');
+?>
+</html>
