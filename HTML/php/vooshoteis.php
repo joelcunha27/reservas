@@ -1,3 +1,0 @@
-<?php
-include('../vooshoteis.html');
-?>
